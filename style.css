@@ -3,15 +3,33 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
-
+.main-container{
+    display: flex;
+    min-height: calc(100vh - 100px);
+}
+.main-content{
+    order: 1;
+    flex-direction: column;
+    flex-grow: 1;
+}
 body {
+    min-height: 100vh; /* Kagkasidis */
     font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
     line-height: 1.7;
     color: #4a3b32; 
     background-color: #f5f0e6; 
-    overflow-x: hidden;
+    /* overflow-x: hidden; */ /* Kagkasidis */
+}
+.darkmode{
+	background-color: #66635f;
+	color: #e0ae91;
+}
+
+.darkmode .projects-sidebar{
+	background-color:#66235f;
+	 
 }
 
 .container {
@@ -56,23 +74,25 @@ a:hover {
 }
 
 header {
-    background: #5D4037; 
-    color: #f5f0e6; 
+    height: 100px; /* Kagkasidis */
+    background: #5D4037;
+    display: flex; 
+    /* color: #f5f0e6; 
     padding: 15px 0; 
     position: fixed;
     width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); 
+    top: 0; */
+    /* z-index: 1000; */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);  */
 }
 
-header .container {
+/* header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+} */
 
-.logo-container {
+/* .logo-container {
     display: flex;
     align-items: center;
 }
@@ -92,7 +112,7 @@ header .container {
 .logo {
     height: 50px;
     margin-right: 15px;
-}
+} */
 
 nav ul {
     list-style: none;
@@ -237,7 +257,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    header {
+    /* header {
         padding: 10px 0;
     }
     header .container {
@@ -251,7 +271,7 @@ footer {
     .logo-container .subtitle {
         margin-left: 0;
         font-size: 0.8em;
-    }
+    } */
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -295,22 +315,26 @@ footer {
 
 /* --- Projects Sidebar --- */
         .projects-sidebar {
-            position: fixed;
+            
+            /* position: fixed;
             top: 0;
-            right: 0;
-            width: 280px;
-            height: 100vh;
-            background: #d3c7b8; 
+            right: 0; */
+            min-width: 220px; /* Kagkasidis */
+            order: 2;
+            flex-direction: column;
+            /* width: 280px;
+            height: 100vh; */
+            background: #d3c7b8;
             backdrop-filter: blur(15px);
-            z-index: 999; 
-            padding: 20px;
-            padding-top: 80px; 
+            /* z-index: 999;  */
+            /* padding: 20px;
+            padding-top: 80px;  */
             display: flex;
             flex-direction: column;
-            overflow-y: auto; 
+            /* overflow-y: auto;  */
         }
 
-        .sidebar-title {
+        /* .sidebar-title {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.8em;
             color: var(--accent-magenta);
@@ -319,19 +343,20 @@ footer {
             text-align: center;
             border-bottom: 1px solid var(--accent-cyan);
             padding-bottom: 10px;
-        }
+        } */
 
-        .project-list {
+        /*Might need the list-style: none Needs testing🟥...fixed 🟩*/
+         .project-list {
             list-style: none;
-            padding: 0;
-        }
+/*            padding: 0; */
+        } 
 
         .project-item {
-            background: var(--secondary-dark);
+            background: #d3c7b8;
             padding: 15px;
             margin-bottom: 15px;
             border-radius: 4px;
-            border-left: 3px solid var(--accent-lime);
+            border-left: 3px #d3c7b8; /* #d3c7b8  Put standard color Kagkasidis */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .project-item:hover {
@@ -341,28 +366,28 @@ footer {
 
         .project-item h4 {
             font-family: 'Orbitron', sans-serif;
-            color: var(--accent-lime);
+            color: #4a3b32; /* #4a3b32 Put standard color Kagkasidis */
             margin-bottom: 8px;
             font-size: 1.1em;
         }
 
         .project-item p {
             font-size: 0.9em;
-            color: var(--text-medium);
+            color: #4a3b32; /* #4a3b32 Put standard color instead of undeclared myvar(--accent-cyan) Kagkasidis */
             margin-bottom: 10px;
         }
 
         .project-item a {
-            color: var(--accent-cyan);
+            color: #4a3b32; /* #4a3b32 Put standard color instead of undeclared myvar(--accent-cyan) Kagkasidis */
             text-decoration: none;
             font-weight: bold;
             font-size: 0.9em;
             transition: color 0.3s, text-shadow 0.3s;
         }
         .project-item a:hover {
-            color: var(--accent-lime);
-            text-shadow: 0 0 5px var(--accent-lime);
-        }
-        .project-item a i {
+            color: #4a3b32; /* #4a3b32 Put standard color instead of undeclared myvar(--accent-cyan) Kagkasidis */
+        } /* Removed text shadow did not work Kagkasidis */
+     
+ /*  .project-item a i {
             margin-left: 5px;
-        }
+        } Removed tag <i> not being used Kagkasidis*/ 

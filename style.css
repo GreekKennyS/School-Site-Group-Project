@@ -90,6 +90,7 @@ a:hover {
     display:flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row;
     min-height: 60px;
     min-width:100vw;
     padding: 0 30px;
@@ -112,21 +113,27 @@ ul{
 
 
 .nav{
-    margin-right: 120px;
-    justify-content: center;
-    flex-direction: column;
     display:flex;
-    order: 1;   
+    flex-wrap: wrap;
     column-gap: 40px;
+    flex-flow: row;
+}
+.nav_item{
+    display:flex;
+    margin-right: 20px;
+    margin-left:20px;
 }
 
+.nav_list{
+    display:flex;
+}
 
 .nav_link{
     color: rgba(255, 255, 255, 0.75);
     font-size: 15px;
     transition: all 0.4s;
 
-}
+} 
 .nav_link:hover,
 .nav_link:focus{
     color: rgba(255, 255, 255, 1);

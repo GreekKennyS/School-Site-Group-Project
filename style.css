@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Georgia&family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-     box-sizing: border-box; 
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
 .main-container{
     display: flex;
     min-height: calc(100vh - 100px);
@@ -14,6 +17,7 @@
     order: 1;
     flex-direction: column;
     flex-grow: 1;
+    min-width: 360px;
 }
 body {
     min-height: 100vh; /* Kagkasidis */
@@ -92,7 +96,7 @@ a:hover {
     justify-content: space-between;
     flex-direction: row;
     min-height: 60px;
-    min-width:100vw;
+    min-width:100%;
     padding: 0 30px;
     margin: 0 auto;
 }
@@ -204,7 +208,7 @@ nav ul li a.active::after {
 } */
 
 
-/* .hero-section {
+ .hero-section {
     background-color: rgb(224, 216, 200); 
     background: linear-gradient(rgba(224, 216, 200, 0.7), rgb(224, 216, 200, 0.9)), url('images/entrance.jpg') no-repeat center center/cover; 
     color: #4a3b32; 
@@ -308,7 +312,7 @@ footer {
     padding: 35px 0; 
     margin-top: 50px;
     border-top: 1px solid #6f4f28; 
-} */
+} 
 /* Πιο νωρις να αλλαξει η css για μεγαλες συσκευες αντι για 768px εβαλα 992px Kagkasidis */
 @media (max-width: 992px) {
     /* header {
@@ -346,7 +350,7 @@ footer {
         font-size: 1em;
     } */
 
-    /* .hero-section {
+     .hero-section {
         min-height: auto; 
         padding-top: 100px; 
         padding-bottom: 40px;
@@ -368,11 +372,11 @@ footer {
 
     .content-section {
         padding: 50px 0;
-    } */
+    } 
 
-    /* .footertext{
+     .footertext{
         color: #d3c7b8;
-    } */
+    } 
 }
 
 /* --- Projects Sidebar --- */
@@ -381,7 +385,8 @@ footer {
             /* position: fixed;
             top: 0;
             right: 0; */
-            min-width: 220px; /* Kagkasidis */
+            max-width: 20%;
+            min-width: 80px; /* Kagkasidis */
             order: 3;
             flex-direction: column;
             /* width: 280px;
@@ -446,10 +451,11 @@ footer {
             font-size: 0.9em;
             transition: color 0.3s, text-shadow 0.3s;
         }
+
         .project-item a:hover {
             color: #4a3b32; /* #4a3b32 Put standard color instead of undeclared myvar(--accent-cyan) Kagkasidis */
         } /* Removed text shadow did not work Kagkasidis */
      
  /*  .project-item a i {
             margin-left: 5px;
-        } Removed tag <i> not being used Kagkasidis*/ 
+        } Removed, tag <i> not being used Kagkasidis*/ 

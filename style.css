@@ -75,7 +75,6 @@ a:hover {
 }
 
 .header {
-    height: 100px; /* Kagkasidis */
     background-color: #5D4037;
     display: flex; 
     width: 100%;
@@ -115,15 +114,12 @@ ul{
 .nav{
     margin-right: 120px;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     display:flex;
-    order: 1;
+    order: 1;   
     column-gap: 40px;
 }
- .nav_item{
-    display:flex;
-    flex-direction: row;
-} 
+
 
 .nav_link{
     color: rgba(255, 255, 255, 0.75);
@@ -379,7 +375,7 @@ footer {
             top: 0;
             right: 0; */
             min-width: 220px; /* Kagkasidis */
-            order: 2;
+            order: 3;
             flex-direction: column;
             /* width: 280px;
             height: 100vh; */

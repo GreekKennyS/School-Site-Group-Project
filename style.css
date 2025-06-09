@@ -29,8 +29,8 @@ body {
 }
 
 .darkmode .projects-sidebar{
-	background-color:#66235f;
-	 
+	background-color:#d877ce;
+	
 }
 
 .container {
@@ -101,13 +101,30 @@ ul{
     list-style: none;
 }
 
-.nav_list{
+.logo{
     display:flex;
+    order: 0;
+}
+
+.logo_img{
+    height: 80px;
+    display: block;
+}
+
+
+.nav{
+    margin-right: 120px;
+    justify-content: center;
+    flex-direction: row;
+    display:flex;
+    order: 1;
     column-gap: 40px;
 }
-.nav_item{
+ .nav_item{
+    display:flex;
+    flex-direction: row;
+} 
 
-}
 .nav_link{
     color: rgba(255, 255, 255, 0.75);
     font-size: 15px;
@@ -120,11 +137,6 @@ ul{
 }
 
 
-
-.logo_img{
-    height: 80px;
-    display: block;
-}
 /* header .container {
     display: flex;
     justify-content: space-between;
@@ -294,8 +306,8 @@ footer {
     margin-top: 50px;
     border-top: 1px solid #6f4f28; 
 } */
-
-@media (max-width: 768px) {
+/* Πιο νωρις να αλλαξει η css για μεγαλες συσκευες αντι για 768px εβαλα 992px Kagkasidis */
+@media (max-width: 992px) {
     /* header {
         padding: 10px 0;
     }
@@ -311,11 +323,19 @@ footer {
         margin-left: 0;
         font-size: 0.8em;
     } */
-    /* nav ul {
+
+     .header{
+        height: 100%;
+     }
+     .header_content{
         flex-direction: column;
+    }
+     /* .nav .logo{
+        flex-direction: column;
+     }*/
+     nav ul {
         align-items: center;
-        margin-top: 10px;
-    } */
+    } 
     /* nav ul li {
         margin: 8px 0;
     }

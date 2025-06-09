@@ -314,7 +314,7 @@ footer {
     border-top: 1px solid #6f4f28; 
 } 
 /* Πιο νωρις να αλλαξει η css για μεγαλες συσκευες αντι για 768px εβαλα 992px Kagkasidis */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     /* header {
         padding: 10px 0;
     }
@@ -373,6 +373,17 @@ footer {
     .content-section {
         padding: 50px 0;
     } 
+
+    .projects-sidebar{
+        display:none;
+    }
+
+    .projects-list{
+        display:none;
+    }
+    .projects-item{
+        display:none;
+    }
 
      .footertext{
         color: #d3c7b8;

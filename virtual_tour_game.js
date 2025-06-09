@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'entrance',
             name: 'Κεντρική Είσοδος',
-            image: 'images/entrance.jpg',
+            image: 'images/entrance_compResize.jpg',
             hotspots: [
                 { x: 55, y: 55, title: 'Είσοδος', text: 'Για να δούμε , θα τα καταφέρεις ; ' },
             ],

@@ -405,8 +405,8 @@ footer {
         }
         
         body.darkmode .project-item {
-	background-color:var(--color-primary);
-    color: var(--color-primary);
+	background-color:var(--darkgrey--color-primary);
+    color: var(--darkgrey--color-primary);
 }
         .project-item:hover {
             transform: translateX(-5px);

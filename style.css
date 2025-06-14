@@ -1,11 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Georgia&family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
 
+:root{
+    --dark--color-primary: #000;
+    --darkgrey--color-primary: #111;
+    --darkwhite--color-list: #333;
+    --dark555--color: #555;
+    --color-foreground: #fff;
+    --color-body-primary: #4a3b32;
+    --color-body-background: #f5f0e6;
+    --color-header-content-primary: #5D4037;
+    --color-nav-link-text: rgba(255, 255, 255, 0.75);
+}
 *,
 *::before,
 *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+@media(prefers-color-scheme: dark){
+
 }
 
 .main-container{
@@ -25,20 +40,24 @@ body {
     min-height: 100vh; /* Kagkasidis */
     font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
     line-height: 1.7;
-    color: #4a3b32; 
-    background-color: #f5f0e6; 
-     overflow-x: hidden; /* Kagkasidis */
+    color: var(--color-body-primary); 
+    background-color: var(--color-body-background); 
+    overflow-x: hidden; /* Kagkasidis */
 }
-.darkmode{
-	background-color: #66635f;
-	color: #e0ae91;
-}
-
-.darkmode .projects-sidebar{
-	background-color:#d877ce;
-	
+body.darkmode{
+	background-color: var(--dark--color-primary);
+	color: var(--dark--color-background);
 }
 
+ .darkmode .projects-sidebar {
+	background-color:var(--darkgrey--color-primary);
+    color: var(--dark--color-primary);
+}
+
+ .darkmode .projects-item {
+	background-color:var(--color-primary);
+    color: var(--color-primary);
+}
 .container {
     width: 90%;
     max-width: 1100px;
@@ -53,7 +72,9 @@ h1, h2 {
     margin-bottom: 20px; 
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
 }
-
+.darkmode h1, h2{
+    color:var(--color-foreground);
+}
 h1 {
     font-size: 2.6em; 
 }
@@ -69,19 +90,23 @@ p {
     margin-bottom: 18px; 
     color: #4a3b32; 
 }
-
+body.darkmode p{
+    color:var(--color-foreground);
+}
 a {
     color: #a0522d; 
     text-decoration: none;
     transition: color 0.3s ease;
 }
-
+.darkmode a{
+    color:var(--color-foreground);
+}
 a:hover {
     color: #8B4513;
 }
 
 .header {
-    background-color: #5D4037;
+    background-color: var(--color-header-content-primary);
     display: flex; 
     width: 100%;
     /* color: #f5f0e6; 
@@ -91,7 +116,9 @@ a:hover {
     /* z-index: 1000; */
     /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);  */
 }
-
+ .darkmode .header {
+    background-color: var(--darkgrey--color-primary);
+}
 .header_content{
     display:flex;
     align-items: center;
@@ -135,11 +162,14 @@ ul{
 }
 
 .nav_link{
-    color: rgba(255, 255, 255, 0.75);
+    color: var(--color-nav-link-text);
     font-size: 15px;
-    transition: all 0.4s;
+    /* transition: all 0.4s; */
 
 } 
+.nav_link .darkmode{
+    color: var(--color-foreground);
+}
 .nav_link:hover,
 .nav_link:focus{
     color: rgba(255, 255, 255, 1);
@@ -282,21 +312,25 @@ nav ul li a.active::after {
 .content-section.alt-bg {
     background-color: #e0d8c8; 
 }
-
+.darkmode #programs{
+    background-color: var(--dark--color-primary);
+}
 .programs-list {
     list-style: none;
     padding-left: 0;
 }
 
 .programs-list li {
-    background: rgba(139, 69, 19, 0.03); 
+    background-color: rgba(139, 69, 19, 0.03); 
     margin-bottom: 12px;
     padding: 18px 20px; 
     border-left: 3px solid #c0a080; 
     border-radius: 3px; 
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
-
+.darkmode .programs-list li{
+    background-color: var(--darkwhite--color-list);
+}
 .programs-list li:hover {
     transform: translateX(5px);
     background: rgba(139, 69, 19, 0.07); 
@@ -315,85 +349,11 @@ footer {
 /*    margin-top: 50px;     Kagkasidis */ 
     border-top: 1px solid #6f4f28; 
 } 
-/* Πιο νωρις να αλλαξει η css για μεγαλες συσκευες αντι για 768px εβαλα 992px Kagkasidis */
-@media (max-width: 768px) {
-    /* header {
-        padding: 10px 0;
-    }
-    header .container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .logo-container {
-        margin-bottom: 10px;
-        text-align: center;
-    }
-    .logo-container .subtitle {
-        margin-left: 0;
-        font-size: 0.8em;
-    } */
-    
-     .header{
-        height: 100%;
-        margin: 0;
-        padding: 0;
-     }
-     .header_content{
-        flex-direction: column;
-    }
-     /* .nav .logo{
-        flex-direction: column;
-     }*/
-     nav ul {
-        align-items: center;
-    } 
-    /* nav ul li {
-        margin: 8px 0;
-    }
-    nav ul li a {
-        font-size: 1em;
-    } */
-
-     .hero-section {
-        min-height: auto; 
-        padding-top: 100px; 
-        padding-bottom: 40px;
-        margin-top: 60px; 
-    }
-    .hero-section h2 {
-        font-size: 2.2em;
-    }
-    .hero-section p {
-        font-size: 1.1em;
-    }
-    h1 { font-size: 2.0em; }
-    h2 { font-size: 1.7em; }
-
-    .cta-button {
-        padding: 10px 20px;
-        font-size: 0.9em;
-    }
-
-    .content-section {
-        padding: 50px 0;
-    } 
-
-    .projects-sidebar{
-        display:none;
-    }
-
-    .projects-list{
-        display:none;
-    }
-    .projects-item{
-        display:none;
-    }
-
-     .footertext{
-        color: #d3c7b8;
-    } 
+.darkmode footer{
+    background: #444;
+    color:var(--color-foreground);
+    border-top:1px var(--darkwhite--color-list);
 }
-
 /* --- Projects Sidebar --- */
         .projects-sidebar {
             
@@ -474,3 +434,94 @@ footer {
  /*  .project-item a i {
             margin-left: 5px;
         } Removed, tag <i> not being used Kagkasidis*/ 
+
+/* Πιο νωρις να αλλαξει η css για μεγαλες συσκευες αντι για 768px εβαλα 992px Kagkasidis */
+@media (max-width: 768px) {
+    /* header {
+        padding: 10px 0;
+    }
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo-container {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .logo-container .subtitle {
+        margin-left: 0;
+        font-size: 0.8em;
+    } */
+    
+     .header{
+        height: 100%;
+        margin: 0;
+        padding: 0;
+     }
+     .header_content{
+        flex-direction: column;
+    }
+     /* .nav .logo{
+        flex-direction: column;
+     }*/
+
+    .nav_link{
+        font-size: auto;
+    }
+
+    .nav_item{
+        margin: 5px;
+    }
+
+
+    nav ul {
+        align-items: center;
+    } 
+    /* nav ul li {
+        margin: 8px 0;
+    }
+    nav ul li a {
+        font-size: 1em;
+    } */
+
+     .hero-section {
+        min-height: auto; 
+        padding-top: 100px; 
+        padding-bottom: 40px;
+        margin-top: 60px; 
+    }
+    .hero-section h2 {
+        font-size: 2.2em;
+    }
+    .hero-section p {
+        font-size: 1.1em;
+    }
+    h1 { font-size: 2.0em; }
+    h2 { font-size: 1.7em; }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .content-section {
+        padding: 50px 0;
+    } 
+
+    .projects-sidebar{
+        display:none;
+    }
+
+    .projects-list{
+        display:none;
+    }
+    .projects-item{
+        display:none;
+    }
+    
+
+     .footertext{
+        color: #d3c7b8;
+    } 
+}
+

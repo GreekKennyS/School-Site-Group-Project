@@ -319,7 +319,10 @@ nav ul li a.active::after {
     border-radius: 3px; 
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.darkmode .programs-list li{
+body.darkmode .programs-list li{
+    background-color: var(--darkwhite--color-list);
+}
+body.darkmode .programs-list ul{
     background-color: var(--darkwhite--color-list);
 }
 .programs-list li:hover {
@@ -397,7 +400,7 @@ footer {
             transition: transform 0.3s ease, box-shadow 0.2s ease;
         }
         
-        body.darkmode .projects-item {
+        body.darkmode .project-item {
 	background-color:var(--color-primary);
     color: var(--color-primary);
 }
@@ -442,6 +445,10 @@ footer {
      
         body.darkmode .project-item a:hover{
             color:var(--color-foreground);
+        }
+        body.darkmode .project-item li{
+            background-color: var(--darkgrey--color-primary);
+            color: var(--darkgrey--color-primary);
         }
  /*  .project-item a i {
             margin-left: 5px;

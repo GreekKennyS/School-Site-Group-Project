@@ -280,12 +280,21 @@ nav ul li a.active::after {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
     border: 1px solid #7a3c0f; 
 }
+.darkmode .cta-button{
+    background: var(--dark--color-primary);
+    border:1px solid var(--dark--color-primary);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 
+}
 .cta-button:hover {
     background-color: #a0522d; 
     color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.darkmode .cta-button:hover{
+    background-color: var(--dark--color-primary);
 }
 
 .content-section {
@@ -348,7 +357,7 @@ footer {
     border-top: 1px solid #6f4f28; 
 } 
 .darkmode footer{
-    background: #444;
+    background: var(--darkgrey--color-primary);
     color:var(--color-foreground);
     border-top:1px var(--darkwhite--color-list);
 }

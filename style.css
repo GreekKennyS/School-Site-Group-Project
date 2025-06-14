@@ -20,12 +20,14 @@
     min-width: 360px;
 }
 body {
+    padding: 0;
+    margin: 0;
     min-height: 100vh; /* Kagkasidis */
     font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
     line-height: 1.7;
     color: #4a3b32; 
     background-color: #f5f0e6; 
-    /* overflow-x: hidden; */ /* Kagkasidis */
+     overflow-x: hidden; /* Kagkasidis */
 }
 .darkmode{
 	background-color: #66635f;
@@ -310,7 +312,7 @@ footer {
     color: #d3c7b8; 
     text-align: center;
     padding: 35px 0; 
-    margin-top: 50px;
+/*    margin-top: 50px;     Kagkasidis */ 
     border-top: 1px solid #6f4f28; 
 } 
 /* Πιο νωρις να αλλαξει η css για μεγαλες συσκευες αντι για 768px εβαλα 992px Kagkasidis */
@@ -330,9 +332,11 @@ footer {
         margin-left: 0;
         font-size: 0.8em;
     } */
-
+    
      .header{
         height: 100%;
+        margin: 0;
+        padding: 0;
      }
      .header_content{
         flex-direction: column;

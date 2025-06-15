@@ -166,15 +166,15 @@ ul{
     color: var(--color-nav-link-text);
     font-size: 15px;
     /* transition: all 0.4s; */
-
 } 
-.nav_link .darkmode{
-    color: var(--color-foreground);
+
+
+.lightmode .nav_link {
+    color: var(--color-nav-link-text);
+    text-decoration: none;
 }
 
-.nav_link .lightmode{
-    color: var(--color-nav-link-text);
-}
+
 .nav_link:hover,
 .nav_link:focus{
     color: rgba(255, 255, 255, 1);
@@ -315,6 +315,7 @@ nav ul li a.active::after {
 
 .lightmode .cta-button{
     background: #8B4513; 
+    color: #f5f0e6;
     border: 1px solid #7a3c0f; 
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -347,8 +348,17 @@ nav ul li a.active::after {
 .content-section.alt-bg {
     background-color: #e0d8c8; 
 }
+.lightmode .content-section.alt-bg{
+    background-color: #e0d8c8;
+}
+.darkmode .content-section.alt-bg{
+    background-color: var(--darkwhite--color-list);
+}
 .darkmode #programs{
-    background-color: var(--dark--color-primary);
+    background-color: var(--darkwhite--color-list);
+}
+.lightmode #programs{
+    background-color: #e0d8c8;
 }
 
 .programs-list {
@@ -360,6 +370,7 @@ nav ul li a.active::after {
 }
 .programs-list li {
     background-color: rgba(139, 69, 19, 0.03); 
+    color: var(--color-body-primary);
     margin-bottom: 12px;
     padding: 18px 20px; 
     border-left: 3px solid #c0a080; 
@@ -372,13 +383,10 @@ body.darkmode .programs-list li{
 }
 body.lightmode .programs-list li{
     background-color: rgba(139, 69, 19, 0.03); 
-    /* color:var(--color-foreground); 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥 */
+    color: var(--color-body-primary);
 }
 body.darkmode .programs-list ul{
     background-color: var(--darkwhite--color-list);
-}
-body.lightmode .programs-list ul{
-    /* background-color: var(--darkwhite--color-list);🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥 */
 }
 .programs-list li:hover {
     transform: translateX(5px);
@@ -627,7 +635,7 @@ footer {
         color: #d3c7b8;
     } 
 }
-/* @media (prefers-color-scheme: dark){
+ @media (prefers-color-scheme: dark){
     body{
 	background-color: var(--dark--color-primary);
 	color: var(--dark--color-background);
@@ -644,6 +652,9 @@ body p{
 }
   .header {
     background-color: var(--darkgrey--color-primary);
+}
+.nav_link {
+    color: var(--color-foreground);
 }
 .nav_link {
     color: var(--color-foreground);
@@ -671,13 +682,13 @@ body p{
     background-color: var(--dark--color-primary);
 }
  #programs{
-    background-color: var(--dark--color-primary);
+    background-color: rgb(4, 3, 15);
 }
  a{
     text-decoration: underline;
 }
 body .programs-list li{
-    background-color: var(--darkwhite--color-list);
+    background-color: #080019;
     color:var(--color-foreground);
 }
 body .programs-list ul{
@@ -715,5 +726,5 @@ body .projects-sidebar {
             background-color: var(--darkgrey--color-primary);
             color: var(--darkgrey--color-primary);
         }
-    } */
+    } 
 

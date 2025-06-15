@@ -19,9 +19,7 @@
   box-sizing: border-box;
 }
 
-@media(prefers-color-scheme: dark){
 
-}
 
 .main-container{
     display: flex;
@@ -34,7 +32,7 @@
     flex-grow: 1;
     min-width: 360px;
 }
-body {
+body{
     padding: 0;
     margin: 0;
     min-height: 100vh; /* Kagkasidis */
@@ -560,4 +558,93 @@ footer {
         color: #d3c7b8;
     } 
 }
+@media (prefers-color-scheme: dark){
+    body{
+	background-color: var(--dark--color-primary);
+	color: var(--dark--color-background);
+}
+ h1,
+ h2{
+    color:var(--color-foreground);
+}
+body p{
+    color:var(--color-foreground);
+}
+ a{
+    color:var(--color-foreground);
+}
+  .header {
+    background-color: var(--darkgrey--color-primary);
+}
+.nav_link {
+    color: var(--color-foreground);
+}
+ .hero-section {
+     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+              url('images/entrance.jpg') no-repeat center center/cover;
+}
+ .hero-section h2{
+    color: var(--color-foreground);
+}
+.hero-section p{
+    color:var(--color-foreground);
+}
+.cta-button a{
+    text-decoration: underline;
+}   
+ .cta-button{
+    background: var(--dark--color-primary);
+    border:1px solid var(--dark--color-primary);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+ .cta-button:hover{
+    background-color: var(--dark--color-primary);
+}
+ #programs{
+    background-color: var(--dark--color-primary);
+}
+ a{
+    text-decoration: underline;
+}
+body .programs-list li{
+    background-color: var(--darkwhite--color-list);
+    color:var(--color-foreground);
+}
+body .programs-list ul{
+    background-color: var(--darkwhite--color-list);
+}
+ footer{
+    background: var(--darkgrey--color-primary);
+    color:var(--color-foreground);
+    border-top:1px var(--darkwhite--color-list);
+}
+body .projects-sidebar {
+	background-color:var(--darkgrey--color-primary);
+    color: var(--dark--color-primary);
+}
+       body .project-item {
+	background-color:var(--darkgrey--color-primary);
+    color: var(--darkgrey--color-primary);
+}
+     
+        .project-item h4{
+            color: var(--color-foreground);
+        }
+        body .project-item p {
+            color:var(--color-foreground);
+        }
+        
+        body .project-item a{
+            color:var(--color-foreground);
+            text-decoration: underline;
+        }
+                body .project-item a:hover{
+            color:var(--color-foreground);
+        }
+        body .project-item li{
+            background-color: var(--darkgrey--color-primary);
+            color: var(--darkgrey--color-primary);
+        }
+    }
 

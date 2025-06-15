@@ -16,6 +16,9 @@
 
     --transition-speed: 0.3s;
     --animation-speed: 0.5s;
+    /* Dark Mode colors*/
+    --dark-primary-color: #000;
+    --dark-primary-text:#fff;
 }
 
 body {
@@ -31,6 +34,9 @@ body {
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
+body.darkmode{
+    color: var
+}
 #game-container {
     display: flex;
     flex-direction: column;

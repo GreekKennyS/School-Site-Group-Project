@@ -34,9 +34,7 @@ body {
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-body.darkmode{
-    color: var
-}
+
 #game-container {
     display: flex;
     flex-direction: column;
